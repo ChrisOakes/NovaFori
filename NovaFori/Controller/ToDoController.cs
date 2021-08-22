@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using NovaFori.Interfaces;
 using NovaFori.Models;
+using Microsoft.Extensions.Logging;
 
 namespace NovaFori.Controller
 {
@@ -14,10 +15,13 @@ namespace NovaFori.Controller
     public class ToDoController : ControllerBase
     {
         private IToDoList _toDoList;
+        private ILogger<ToDoController> _logger;
 
-        public ToDoController(IToDoList toDoList)
+        public ToDoController(IToDoList toDoList,
+            ILogger<ToDoController> logger)
         {
             _toDoList = toDoList;
+            _logger = logger;
         }
         [HttpGet]
         [Route("GetList")]
@@ -34,6 +38,7 @@ namespace NovaFori.Controller
             catch (Exception er)
             {
 
+                _logger.LogError(er, "Error encountered");
                 return BadRequest(er);
             }
         }
@@ -51,6 +56,7 @@ namespace NovaFori.Controller
             catch (Exception er)
             {
 
+                _logger.LogError(er, "Error encountered");
                 return BadRequest(er);
             }
         }
@@ -67,7 +73,7 @@ namespace NovaFori.Controller
             }
             catch (Exception er)
             {
-
+                _logger.LogError(er, "Error encountered");
                 return BadRequest(er);
             }
         }
@@ -84,6 +90,7 @@ namespace NovaFori.Controller
             catch (Exception er)
             {
 
+                _logger.LogError(er, "Error encountered");
                 return BadRequest(er);
             }
         }

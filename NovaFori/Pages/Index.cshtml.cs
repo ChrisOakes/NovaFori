@@ -45,7 +45,7 @@ namespace NovaFori.Pages
             }
             catch (Exception er)
             {
-
+                _logger.LogError(er, "Error encountered");
                 throw;
             }
         }
@@ -66,7 +66,7 @@ namespace NovaFori.Pages
             }
             catch (Exception er)
             {
-
+                _logger.LogError(er, "Error encountered");
                 throw;
             }
         }
