@@ -1,0 +1,5 @@
+Thank you for opportunity in taking this test.
+
+
+It took me three hours to code the solution, which included downloading Git (I normally use TFS and TFVC) and comitting it to a public repo.
+You can build/run teh application through Visual Studio IDE
