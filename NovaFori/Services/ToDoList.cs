@@ -20,7 +20,9 @@ namespace NovaFori.Services
         {
             try
             {
+                List<t_to_do_item> li_t_to_do_item = new List<t_to_do_item>();
 
+                return li_t_to_do_item;
             }
             catch (Exception er)
             {
@@ -34,7 +36,9 @@ namespace NovaFori.Services
         {
             try
             {
+                List<t_to_do_item> li_t_to_do_item = new List<t_to_do_item>();
 
+                return li_t_to_do_item;
             }
             catch (Exception er)
             {

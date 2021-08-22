@@ -8,6 +8,7 @@ namespace NovaFori.Models
 {
     public class t_to_do_item
     {
+        [Key]
         public int ItemID { get; set; }
         [Required(ErrorMessage = "You are required to enter a To Do description")]
         public string Description { get; set; }
