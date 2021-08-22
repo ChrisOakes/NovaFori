@@ -25,11 +25,46 @@ namespace NovaFori_Test
         public List<t_to_do_item> li_t_to_do_item { get; set; }
 
         [Fact]
-        public void Add_To_Do_List_Item()
+        public async Task TestController()
         {
             //arrange
             //act
+            var response = await _httpClient.GetAsync("ToDo/test");
             //assert
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task GetListOfItems()
+        {
+            //arrange
+            //act
+            var response = await _httpClient.GetAsync("ToDo/GetList");
+            var content = response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<List<t_to_do_item>>(content.Result);
+            //assert
+
+            Assert.IsType<List<t_to_do_item>>(result);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task Add_To_Do_List_Item()
+        {
+            //arrange
+            string description = "Adding a new to do item";
+
+            li_t_to_do_item = new List<t_to_do_item>();
+
+            //act
+            var response = await _httpClient.PostAsJsonAsync<List<t_to_do_item>>("ToDo/AddToDoItem/" + description, li_t_to_do_item);
+            var content = response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<List<t_to_do_item>>(content.Result);
+            //assert
+
+            Assert.IsType<List<t_to_do_item>>(result);
+            Assert.Equal(1, result.Count);
         }
 
         [Theory]
@@ -52,7 +87,7 @@ namespace NovaFori_Test
 
             t_to_do_item = new t_to_do_item();
 
-            t_to_do_item.Complete = false;
+            t_to_do_item.Complete = currentValue;
             t_to_do_item.Created = DateTime.Now;
             t_to_do_item.Description = "Create the required folders";
             t_to_do_item.Updated = DateTime.Now;
@@ -70,7 +105,7 @@ namespace NovaFori_Test
 
             //act
 
-            var response = await _httpClient.PostAsync<List<t_to_do_item>>("ToDo/ToggleToDoItem/1", li_t_to_do_item, new JsonMediaTypeFormatter());
+            var response = await _httpClient.PostAsJsonAsync<List<t_to_do_item>>("ToDo/ToggleToDoItem/1", li_t_to_do_item);
             var content = response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<List<t_to_do_item>>(content.Result);
             //assert
@@ -79,10 +114,10 @@ namespace NovaFori_Test
 
             if (currentValue)
             {
-                Assert.False(result.Where(x => x.ItemID == 1).FirstOrDefault().Complete);
+                Assert.False(result[1].Complete);
             } else
             {
-                Assert.True(result.Where(x => x.ItemID == 1).FirstOrDefault().Complete);
+                Assert.True(result[1].Complete);
 
             }
         }

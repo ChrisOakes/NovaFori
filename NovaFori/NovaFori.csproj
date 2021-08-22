@@ -6,15 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\actions.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.17" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\js\actions.ts" />
   </ItemGroup>
 
 </Project>

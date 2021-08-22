@@ -19,6 +19,24 @@ namespace NovaFori.Controller
         {
             _toDoList = toDoList;
         }
+        [HttpGet]
+        [Route("GetList")]
+        public async Task<IActionResult> GetList()
+        {
+            try
+            {
+                List<t_to_do_item> li_t_to_do_item = new List<t_to_do_item>();
+
+                li_t_to_do_item = await _toDoList.GetListOfItems();
+
+                return Ok(li_t_to_do_item);
+            }
+            catch (Exception er)
+            {
+
+                return BadRequest(er);
+            }
+        }
 
         [HttpPost]
         [Route("AddToDoItem/{Description}")]
@@ -46,6 +64,22 @@ namespace NovaFori.Controller
                 li_t_to_do_item = await _toDoList.ToggleToDoItem(ToDoID, li_t_to_do_item);
 
                 return Ok(li_t_to_do_item);
+            }
+            catch (Exception er)
+            {
+
+                return BadRequest(er);
+            }
+        }
+
+        [HttpGet]
+        [Route("test")]
+        public async Task<IActionResult> test()
+        {
+            try
+            {
+
+                return Ok();
             }
             catch (Exception er)
             {

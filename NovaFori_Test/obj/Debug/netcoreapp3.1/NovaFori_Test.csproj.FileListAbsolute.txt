@@ -433,3 +433,6 @@ C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori_Test\obj\Debug\netcoreapp3.1
 C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori_Test\obj\Debug\netcoreapp3.1\NovaFori_Test.dll
 C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori_Test\obj\Debug\netcoreapp3.1\NovaFori_Test.pdb
 C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori_Test\obj\Debug\netcoreapp3.1\NovaFori_Test.genruntimeconfig.cache
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori_Test\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori_Test\bin\Debug\netcoreapp3.1\System.Web.Http.WebHost.dll
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori_Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

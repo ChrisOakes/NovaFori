@@ -351,3 +351,8 @@ C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\obj\Debug\netcoreapp3.1\Nova
 C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\obj\Debug\netcoreapp3.1\NovaFori.dll
 C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\obj\Debug\netcoreapp3.1\NovaFori.pdb
 C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\obj\Debug\netcoreapp3.1\NovaFori.genruntimeconfig.cache
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\bin\Debug\netcoreapp3.1\System.Web.Http.WebHost.dll
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Chris Oakes\source\repos\NovaFori\NovaFori\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

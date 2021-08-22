@@ -10,6 +10,6 @@ namespace NovaFori.Interfaces
     {
         public Task<List<t_to_do_item>> AddToDoItem(string Description, List<t_to_do_item> ExistinList);
         public Task<List<t_to_do_item>> ToggleToDoItem(int ItemID, List<t_to_do_item> ExistinList);
-
+        public Task<List<t_to_do_item>> GetListOfItems();
     }
 }
