@@ -25,7 +25,7 @@ function addItem() {
             drawTables(response);
 
             $('#newItem').val('');
-
+            toggleButton('');
             
         }
     })
