@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("NovaFori, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\Chris Oakes\\source\\repos\\NovaFori\\NovaFori", "NovaFori.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("NovaFori, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\coake\\source\\repos\\Unwrapped\\ToDoList\\NovaFori", "NovaFori.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovaFori_Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
