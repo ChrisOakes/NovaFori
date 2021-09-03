@@ -1,6 +1,6 @@
-Thank you for opportunity in taking this test.
 
-•How long did you spend on your solution?
+
+How long did it take to code your solution?
 
 	It took me three hours to code the solution, which included downloading Git (I normally use TFS and TFVC) and comitting it to a public repo.
 
